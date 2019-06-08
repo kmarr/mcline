@@ -1,0 +1,7 @@
+data
+figures
+out
+__pycache__
+vars
+.DS_Store
+*.pyc

@@ -48,20 +48,6 @@ def gaussfold(lam, flux, fwhm):
     # Convolve input spectrum with the Gaussian profile
     fold = np.convolve(interflux, gauss, mode='same')
 
-    # while True:
-    #     print(type(interlam))
-    #     print(type(fold))
-    #     print(interlam)
-    #     print(fold)
-    #     #plt.plot(fold, interflux)
-    #     #plt.show()
-    #     time.sleep(100000)
-
-    #while True:
-    #    for i in range(len(interlam)):
-    #        print(interlam[i], fold[i])
-    #    time.sleep(1000)
-
     y = interpolate.interp1d(interlam, fold, kind='linear', fill_value='extrapolate')
     fluxfold = y(lam)
 
